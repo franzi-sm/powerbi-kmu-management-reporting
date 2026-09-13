@@ -10,13 +10,13 @@ Dataset is synthetic: a DACH company with 4 business segments across 5 regions, 
 
 ## Pipeline
 
-<img width="547" height="296" alt="image" src="https://github.com/user-attachments/assets/747a87fb-f526-4ceb-af2f-11c6d4b608a4" />
+<img width="1922" height="1080" alt="Screenshot 2026-08-31 at 20 49 24" src="https://github.com/user-attachments/assets/17524b91-b1eb-4bb2-90d8-7a87d1ab97f5" />
 
 Raw Excel exports are ingested, cleaned, and modeled into a star schema, then surfaced in an interactive Power BI cockpit.
 
 ## Data Model
 
-<img width="547" height="296" alt="image" src="https://github.com/user-attachments/assets/a0e1d97c-bc15-4496-9209-60eb83d0266f" />
+<img width="994" height="318" alt="Screenshot 2026-09-13 at 15 17 54" src="https://github.com/user-attachments/assets/2c7cec8d-8ef0-4339-99df-88ed89a24988" />
 
 Monthly Excel exports (one sheet per period) are transformed into a clean star schema. The fact table holds only keys and KPI values. `Dim_Datum` is built at daily grain so `DATEADD` based time intelligence returns correct results. `Dim_Regionen` includes coordinates for the map visual.
 
@@ -37,7 +37,7 @@ Monthly Excel exports (one sheet per period) are transformed into a clean star s
 
 <img width="485" height="294" alt="image" src="https://github.com/user-attachments/assets/660b27fe-db05-49a3-9f30-7bcc2a29eaf0" />
 
-<img width="806" height="332" alt="image" src="https://github.com/user-attachments/assets/ee3cc129-d472-4d26-b80e-11fa31a480de" />
+<img width="403" height="166" alt="image" src="https://github.com/user-attachments/assets/ee3cc129-d472-4d26-b80e-11fa31a480de" />
 
 
 ## Tech Stack
