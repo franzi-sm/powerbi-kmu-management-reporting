@@ -72,9 +72,9 @@ Monthly Excel exports are transformed into a clean star schema. The fact table h
 ## Repository Structure
 
     Power-BI-Management-Reporting-Demo/
-    ├── pbix/
-    │   └── Management-Report-Demo.pbix   # Full demo file
-    └── README.md
+    ├── Demo.pbix                              # Power BI management reporting dashboard
+    ├── Management_Report_VORHER_ERP_Export.xlsx  # Raw Excel / ERP export
+    └── README.md                              # Project documentation
 
 ---
 
