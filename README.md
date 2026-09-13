@@ -70,15 +70,18 @@ Monthly Excel exports are transformed into a clean star schema. The fact table h
 
 ## Repository Structure
 
-```text
-Power-BI-Management-Reporting-Demo/
-├── pbix/
-│   └── Management-Report-Demo.pbix   # Full demo file
-└── README.md
+    Power-BI-Management-Reporting-Demo/
+    ├── pbix/
+    │   └── Management-Report-Demo.pbix   # Full demo file
+    └── README.md
+
+---
 
 ## Data Disclaimer
 
 Artificial dataset created for demonstration purposes only. All company, financial, regional, and operational data is synthetic.
+
+---
 
 ## Author
 
