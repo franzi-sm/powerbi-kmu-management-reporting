@@ -23,6 +23,7 @@ This project demonstrates an end-to-end management reporting pipeline for a synt
 
 ### 1. Extract
 - Monthly Excel exports with one sheet per reporting period
+<img width="1922" height="1080" alt="Screenshot 2026-08-31 at 20 49 24" src="https://github.com/user-attachments/assets/19449242-7025-482b-bd09-c1d09377e702" />
 
 ### 2. Transform (`Power Query`)
 - Centralized workbook connection via `fx_Workbook`
