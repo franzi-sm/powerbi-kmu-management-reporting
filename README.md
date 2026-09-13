@@ -1,49 +1,77 @@
 # Power BI Management Reporting: KMU Demo
 
-End to end analytics solution for SME management reporting: from raw Excel data to a star schema model and a DAX driven dashboard for owner led companies (KMU/Mittelstand) that have outgrown manual reporting.
-
-Artificial Dataset is synthetic: a DACH company with 4 business segments across 5 regions, tracking plan/actual revenue, EBIT, order intake, and headcount costs.
-
-**Contents:** `pbix/Management-Report-Demo.pbix`, the full demo file.
+> End-to-end analytics solution for SME management reporting: from raw Excel data to a star schema model and a DAX-driven dashboard for owner-led companies (KMU/Mittelstand) that have outgrown manual reporting.
 
 ---
 
-## Pipeline
+## Project Overview
 
-<img width="1922" height="1080" alt="Screenshot 2026-08-31 at 20 49 24" src="https://github.com/user-attachments/assets/17524b91-b1eb-4bb2-90d8-7a87d1ab97f5" />
+This project demonstrates an end-to-end management reporting pipeline for a synthetic DACH company with 4 business segments across 5 regions, tracking plan/actual revenue, EBIT, order intake, and headcount costs.
 
-Raw Excel exports are ingested, cleaned, and modeled into a star schema, then surfaced in an interactive Power BI cockpit.
-
-## Data Model
-
-<img width="994" height="318" alt="Screenshot 2026-09-13 at 15 17 54" src="https://github.com/user-attachments/assets/2c7cec8d-8ef0-4339-99df-88ed89a24988" />
-
-Monthly Excel exports (one sheet per period) are transformed into a clean star schema. The fact table holds only keys and KPI values. `Dim_Datum` is built at daily grain so `DATEADD` based time intelligence returns correct results. `Dim_Regionen` includes coordinates for the map visual.
-
-## Power Query (M)
-
-- `fx_Workbook` — a single centralized query connecting to the source Excel file, so every other query reads from one point of truth
-- `fnIstMonatsblatt` — pattern-matches sheet names to identify valid monthly-data sheets, so new months/years are picked up automatically on refresh
-- `fnTransformBlatt` — reshapes each sheet and derives the reporting date directly from the sheet name
+**Data:** Artificial / synthetic dataset  
+**File:** `pbix/Management-Report-Demo.pbix`
 
 ---
-
-## Key Highlights
-
-- Daily grain date dimension, required for `DATEADD` time intelligence to work correctly
-- Fixed a duplicate key relationship error by replacing a concatenated text key with a proper date key
-- Ingestion logic scales to new months and years automatically, no query maintenance
-- Dynamic K€/Mio.€ display formatting and conditional arrow/color indicators via `SWITCH(TRUE(), ...)` and `UNICHAR`
-
-<img width="1202" height="716" alt="Screenshot 2026-09-06 at 21 05 53" src="https://github.com/user-attachments/assets/e2c09bb3-42cb-42c7-a975-2ad2aceb8eb6" />
-
-<img width="1206" height="523" alt="Screenshot 2026-09-06 at 22 14 50" src="https://github.com/user-attachments/assets/a744af9c-f2a5-422e-b46e-dd3c0339448b" />
-
 
 ## Tech Stack
 
 `Power BI` · `Power Query (M)` · `Star Schema Modeling` · `DAX`
 
-## About
+---
 
-Built by Franziska Meyndt
+## Pipeline
+
+### 1. Extract
+- Monthly Excel exports with one sheet per reporting period
+
+### 2. Transform (`Power Query`)
+- Centralized workbook connection via `fx_Workbook`
+- Automatic identification of valid monthly sheets via `fnIstMonatsblatt`
+- Sheet transformation and reporting date extraction via `fnTransformBlatt`
+
+### 3. Load & Model (Power BI)
+- Star-schema dimensional data model
+- Fact table containing KPI values and dimension keys
+- Daily-grain `Dim_Datum` for time intelligence
+- `Dim_Regionen` including coordinates for map visuals
+
+### 4. Report & Analyse
+- DAX-driven management KPIs
+- Plan/actual and variance analysis
+- Dynamic K€/Mio.€ formatting
+- Conditional arrows and colour indicators
+
+---
+
+## Data Model
+
+<img width="994" height="318" alt="Screenshot 2026-09-13 at 15 17 54" src="https://github.com/user-attachments/assets/2c7cec8d-8ef0-4339-99df-88ed89a24988" />
+
+Monthly Excel exports are transformed into a clean star schema. The fact table holds only keys and KPI values. `Dim_Datum` is built at daily grain so `DATEADD`-based time intelligence returns correct results. `Dim_Regionen` includes coordinates for the map visual.
+
+---
+
+## Dashboard
+
+<img width="1202" height="716" alt="Screenshot 2026-09-06 at 21 05 53" src="https://github.com/user-attachments/assets/e2c09bb3-42cb-42c7-a975-2ad2aceb8eb6" />
+
+<img width="1206" height="523" alt="Screenshot 2026-09-06 at 22 14 50" src="https://github.com/user-attachments/assets/a744af9c-f2a5-422e-b46e-dd3c0339448b" />
+
+---
+
+## Key Highlights
+
+- Daily-grain date dimension for reliable `DATEADD` time intelligence
+- Fixed a duplicate key relationship error by replacing a concatenated text key with a proper date key
+- Ingestion logic automatically scales to new months and years
+- Dynamic K€/Mio.€ display formatting and conditional arrow/colour indicators via `SWITCH(TRUE(), ...)` and `UNICHAR`
+
+---
+
+## Repository Structure
+
+```text
+Power-BI-Management-Reporting-Demo/
+├── pbix/
+│   └── Management-Report-Demo.pbix   # Full demo file
+└── README.md
