@@ -10,13 +10,13 @@ Dataset is synthetic: a DACH company with 4 business segments across 5 regions, 
 
 ## Pipeline
 
-![Pipeline overview](assets/pipeline-overview.png)
+<img width="547" height="296" alt="image" src="https://github.com/user-attachments/assets/747a87fb-f526-4ceb-af2f-11c6d4b608a4" />
 
 Raw Excel exports are ingested, cleaned, and modeled into a star schema, then surfaced in an interactive Power BI cockpit.
 
 ## Data Model
 
-![Star schema data model](assets/star-schema-data-model.png)
+<img width="547" height="296" alt="image" src="https://github.com/user-attachments/assets/a0e1d97c-bc15-4496-9209-60eb83d0266f" />
 
 Monthly Excel exports (one sheet per period) are transformed into a clean star schema. The fact table holds only keys and KPI values. `Dim_Datum` is built at daily grain so `DATEADD` based time intelligence returns correct results. `Dim_Regionen` includes coordinates for the map visual.
 
@@ -34,6 +34,11 @@ Monthly Excel exports (one sheet per period) are transformed into a clean star s
 - Fixed a duplicate key relationship error by replacing a concatenated text key with a proper date key
 - Ingestion logic scales to new months and years automatically, no query maintenance
 - Dynamic K€/Mio.€ display formatting and conditional arrow/color indicators via `SWITCH(TRUE(), ...)` and `UNICHAR`
+
+<img width="485" height="294" alt="image" src="https://github.com/user-attachments/assets/660b27fe-db05-49a3-9f30-7bcc2a29eaf0" />
+
+<img width="806" height="332" alt="image" src="https://github.com/user-attachments/assets/ee3cc129-d472-4d26-b80e-11fa31a480de" />
+
 
 ## Tech Stack
 
