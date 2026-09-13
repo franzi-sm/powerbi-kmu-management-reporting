@@ -2,7 +2,7 @@
 
 End to end analytics solution for SME management reporting: from raw Excel data to a star schema model and a DAX driven dashboard for owner led companies (KMU/Mittelstand) that have outgrown manual reporting.
 
-Dataset is synthetic: a DACH company with 4 business segments across 5 regions, tracking plan/actual revenue, EBIT, order intake, and headcount costs.
+Artificial Dataset is synthetic: a DACH company with 4 business segments across 5 regions, tracking plan/actual revenue, EBIT, order intake, and headcount costs.
 
 **Contents:** `pbix/Management-Report-Demo.pbix`, the full demo file.
 
@@ -42,8 +42,8 @@ Monthly Excel exports (one sheet per period) are transformed into a clean star s
 
 ## Tech Stack
 
-Power BI Desktop, Power Query (M), DAX, Star Schema Modeling
+`Power BI` · `Power Query (M)` · `Star Schema Modeling` · `DAX`
 
 ## About
 
-Built by Franziska Meyndt, Business & Data Analytics, freelance Power BI development for SMEs (dashboarding, data modeling, reporting automation).
+Built by Franziska Meyndt
