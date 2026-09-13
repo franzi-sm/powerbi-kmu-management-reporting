@@ -35,9 +35,9 @@ Monthly Excel exports (one sheet per period) are transformed into a clean star s
 - Ingestion logic scales to new months and years automatically, no query maintenance
 - Dynamic K€/Mio.€ display formatting and conditional arrow/color indicators via `SWITCH(TRUE(), ...)` and `UNICHAR`
 
-<img width="485" height="294" alt="image" src="https://github.com/user-attachments/assets/660b27fe-db05-49a3-9f30-7bcc2a29eaf0" />
+<img width="1202" height="716" alt="Screenshot 2026-09-06 at 21 05 53" src="https://github.com/user-attachments/assets/e2c09bb3-42cb-42c7-a975-2ad2aceb8eb6" />
 
-<img width="403" height="166" alt="image" src="https://github.com/user-attachments/assets/ee3cc129-d472-4d26-b80e-11fa31a480de" />
+<img width="1184" height="523" alt="Screenshot 2026-09-06 at 22 15 03" src="https://github.com/user-attachments/assets/2169b603-ea74-4f5a-8900-29db466d6e84" />
 
 
 ## Tech Stack
