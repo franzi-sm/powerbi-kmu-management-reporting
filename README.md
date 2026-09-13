@@ -37,7 +37,7 @@ Monthly Excel exports (one sheet per period) are transformed into a clean star s
 
 <img width="1202" height="716" alt="Screenshot 2026-09-06 at 21 05 53" src="https://github.com/user-attachments/assets/e2c09bb3-42cb-42c7-a975-2ad2aceb8eb6" />
 
-<img width="1184" height="523" alt="Screenshot 2026-09-06 at 22 15 03" src="https://github.com/user-attachments/assets/2169b603-ea74-4f5a-8900-29db466d6e84" />
+<img width="1206" height="523" alt="Screenshot 2026-09-06 at 22 14 50" src="https://github.com/user-attachments/assets/a744af9c-f2a5-422e-b46e-dd3c0339448b" />
 
 
 ## Tech Stack
